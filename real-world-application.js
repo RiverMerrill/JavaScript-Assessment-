@@ -60,18 +60,19 @@ var crayola1990 = [
 
 //create a loop that will iterate over each item in the array and then use the String methods to modify the value at the current position in the array
 var crayolaJoin = crayola1990.join();
+function rep(f, r) {
+	var find = f;
+	var re = new RegExp(find, 'g');
+	crayolaJoin = crayolaJoin.replace(re, r);
+}
 
 for(var i = 0; i < crayolaJoin.length; i++) {
 
 	crayolaJoin = crayolaJoin.toLowerCase();
-	var find = ' ';
-	var re = new RegExp(find, 'g');
-	crayolaJoin = crayolaJoin.replace(re, '-');
-	
-	var find2 = ',';
-	var re = new RegExp(find2, 'g');
-	crayolaJoin = crayolaJoin.replace(re, '-');
+	rep(' ','-');
+	rep(',','-');
 };
+console.log(crayolaJoin);
 /***** HINTS *******
  * remember strings are immutable but the value of a variable can be adjusted as often as needed.
  * take advantage of the methods available on stings http://www.w3schools.com/js/js_string_methods.asp
