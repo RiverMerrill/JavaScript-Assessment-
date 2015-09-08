@@ -73,6 +73,14 @@ for(var i = 0; i < crayolaJoin.length; i++) {
 	rep(',','-');
 };
 console.log(crayolaJoin);
+
+//or
+
+crayola1990 = crayola1990.join();
+
+crayola1990 = crayola1990.toLowerCase().replace(/ /g,'-')
+crayola1990 = crayola1990.split(',');
+console.log(crayola1990);
 /***** HINTS *******
  * remember strings are immutable but the value of a variable can be adjusted as often as needed.
  * take advantage of the methods available on stings http://www.w3schools.com/js/js_string_methods.asp
