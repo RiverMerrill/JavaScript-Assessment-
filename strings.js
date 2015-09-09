@@ -6,12 +6,25 @@ var sentence = 'When i went to the mall i bought a pair of shoes.';
 
 var str = sentence.split(' ');
 for(var i = 0; i < str.length; i++) {
-	var str2 = str.join(' ');
 	if(str[i].length == 1 && str[i] == 'i') {
 	str[i] = str[i].toUpperCase();
 	}
+var str2 = str.join(' ');
 }
 console.log(str2);
+
+//or a function:
+
+function uppercaseMe(value) {
+var str = value.split(' ');
+for(var i = 0; i < str.length; i++) {
+	if(str[i].length == 1 && str[i] == 'i') {
+	str[i] = str[i].toUpperCase();
+	}
+var str2 = str.join(' ');
+}
+console.log(str2);
+}
 
 
 //2. The history of JavaScript is interesting but how many times does the letter a appear? Find a way to count both upper and lower case A's
