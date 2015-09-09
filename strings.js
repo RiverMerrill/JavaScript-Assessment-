@@ -1,10 +1,17 @@
  //1. Given the following sentence: Change all of the lowercase letters i, in reference to yourself, to the uppercase I
  // careful not to uppercase the i in the word pair
+ 
+ //This is probably way over complicated, but it works.
 var sentence = 'When i went to the mall i bought a pair of shoes.';
 
-for(var i = 0; i < 2; i++) {
-      sentence = sentence.replace('i', 'I');
+var str = sentence.split(' ');
+for(var i = 0; i < str.length; i++) {
+	var str2 = str.join(' ');
+	if(str[i].length == 1 && str[i] == 'i') {
+	str[i] = str[i].toUpperCase();
+	}
 }
+console.log(str2);
 
 
 //2. The history of JavaScript is interesting but how many times does the letter a appear? Find a way to count both upper and lower case A's
@@ -13,8 +20,8 @@ var jsHistory = 'JavaScript, not to be confused with Java, was created in 10 day
 
 var count = 0;
 for(var i = 0; i < jsHistory.length; i++) {
-    if(jsHistory[i] === 'a' || jsHistory[i] === 'A') {
-        console.log(count += 1);
+    if(jsHistory[i] === 'a' || jsHistory === 'A') {
+        count++
     }
 }
 
